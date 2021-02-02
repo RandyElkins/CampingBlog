@@ -12,7 +12,7 @@ const logger = require('./middleware/logger');
 // const studentsRoutes = require('./routes/students');
 
 /******* PORT *******/
-const PORT = 3000;
+const PORT = 3100;
 
 /*** APP INSTANCE ***/
 const app = express();
@@ -33,6 +33,7 @@ app.use(methodOverride('_method'))
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(logger);
 app.use(session({
     secret: 'LifeHappensOutside!',
     resave: false,
@@ -42,11 +43,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /****** ROUTES ******/
-app.use('/', routes.rtsFlights);
+app.use('/', routes.rtsCamps);
 // app.use('/', indexRoutes);
 // app.use('/', studentsRoutes);
 
 /** APP  LISTENING **/
-app.listen(port, () => {
-    console.log(`Express is listening on port:${port}`);
+app.listen(PORT, () => {
+    console.log(`Express is listening on port:${PORT}`);
 });
