@@ -1,0 +1,166 @@
+<mxfile host="65bd71144e" modified="2021-02-01T05:25:10.862Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="qGIHU4WcgzF1WFBmezVI" type="embed">
+    <diagram id="F4u_9Ul08jjEbGr49d2d" name="Page-1">
+        <mxGraphModel dx="832" dy="429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="25" value="" style="group;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="25">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                    <mxGeometry x="20" y="30" width="440" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Sign Up" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="11">
+                    <mxGeometry x="430" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;h6&gt;Jumbotron Sub-Title&lt;/h6&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="11">
+                    <mxGeometry x="20" y="80" width="440" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Add New Campground" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="11">
+                    <mxGeometry x="160" y="130" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;h1&gt;Jumbotron Title&lt;/h1&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="11">
+                    <mxGeometry x="20" y="40" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Site Name" style="swimlane;" vertex="1" parent="25">
+                    <mxGeometry x="340" y="210" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Site Name" style="swimlane;" vertex="1" parent="25">
+                    <mxGeometry x="180" y="210" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Site Name" style="swimlane;" vertex="1" parent="25">
+                    <mxGeometry x="20" y="210" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Login" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="25">
+                    <mxGeometry x="370" width="55" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="More Info" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;perimeterSpacing=1;fontColor=#ffffff;" vertex="1" parent="25">
+                    <mxGeometry x="80" y="300" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="More Info" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;perimeterSpacing=1;fontColor=#ffffff;" vertex="1" parent="25">
+                    <mxGeometry x="240" y="300" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="More Info" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;perimeterSpacing=1;fontColor=#ffffff;" vertex="1" parent="25">
+                    <mxGeometry x="400" y="300" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Logo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="25">
+                    <mxGeometry width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry y="360" width="480" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="group" vertex="1" connectable="0" parent="54">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="65">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;h1&gt;Comments&lt;/h1&gt;&lt;p&gt;- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;br&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- [Username] MMM. DD, YYYY&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;br&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- [Username] MMM. DD, YYYY&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="65">
+                    <mxGeometry x="30" y="210" width="420" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Site Name" style="swimlane;" vertex="1" parent="65">
+                    <mxGeometry x="20" y="50" width="440" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Add Comment" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="65">
+                    <mxGeometry x="385" y="220" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Picture" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="65">
+                    <mxGeometry x="30" y="80" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;h1&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;Submitted by: Username - MMM. DD, YYYY&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="65">
+                    <mxGeometry x="250" y="80" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="Sign Up" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="65">
+                    <mxGeometry x="430" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="Login" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="65">
+                    <mxGeometry x="370" width="55" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="Logo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="65">
+                    <mxGeometry width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry y="720" width="490" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="66">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="Submit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="310" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="name" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="80" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;h1&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Create a New Campground&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="20" width="240" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="Sign Up" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="430" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="Signed in as &amp;lt;User&amp;gt;" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="290" width="125" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="Logo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="Name" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="60" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="price" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="130" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="Price" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="110" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="image url" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="180" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="Image" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="160" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="description" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="230" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="Description" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="210" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="Lake Chelan State Park, WA&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="280" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Location" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="66">
+                    <mxGeometry x="120" y="260" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="500" width="490" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="85">
+                    <mxGeometry width="480" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Submit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="85">
+                    <mxGeometry x="120" y="110" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="text" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#f0f0f0;" vertex="1" parent="85">
+                    <mxGeometry x="120" y="80" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="&lt;h1&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Add a New Comment to &amp;lt;Campground&amp;gt;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="85">
+                    <mxGeometry x="60" y="20" width="360" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="Sign Up" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="85">
+                    <mxGeometry x="430" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Signed in as &amp;lt;User&amp;gt;" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="85">
+                    <mxGeometry x="290" width="125" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Logo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="85">
+                    <mxGeometry width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="Comment Text" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="85">
+                    <mxGeometry x="120" y="60" width="240" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
