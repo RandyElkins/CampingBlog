@@ -14,26 +14,27 @@
     </header>
 
     <div class="row text-center" style="display: flex; flex-wrap: wrap;">
-        <!-- <% //campgroundsData.forEach(function(campground){ %> -->
-        <div class="col-md-3 col-sm-6">
-            <div class="thumbnail">
-                <img src="https://res.cloudinary.com/djxlykr6h/image/upload/v1603687197/familyAtBaker_g123n8.jpg">
-                <!-- <img src="<%= //campground.image %>"> -->
-                <div class="caption">
-                    <h4 class="pull-left">
-                        Beautiful Baker
-                        <!-- <%= //campground.name %> -->
-                    </h4>
-                    <h4 class="pull-right">$
-                        <!-- <%= //campground.price %> -->
-                        10/nt</h4>
+        <% context.camps.forEach((camp, idx) => { %>
+            <%console.log('camp', camp);%>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <!-- <img src="https://res.cloudinary.com/djxlykr6h/image/upload/v1603687197/familyAtBaker_g123n8.jpg"> -->
+                        <img src="<%= camp.campDbImage %>">
+                        <div class="caption">
+                            <h4 class="pull-left">
+                                <!-- Beautiful Baker -->
+                                <%= camp.campDbName %>
+                            </h4>
+                            <h4 class="pull-right">$
+                                <%= camp.campDbPrice %>
+                                    /nt</h4>
+                        </div>
+                        <p>
+                            <a href="/camp/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    <!-- <a href="/campgrounds/<%= //campground._id %>" class="btn btn-primary">More Info</a> -->
-                </p>
-            </div>
-        </div>
-        <%// }); %>
+                <% }); %>
     </div>
 
     <%- include('../../partials/footer') %>

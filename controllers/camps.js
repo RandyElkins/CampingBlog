@@ -12,9 +12,9 @@ const ctrlsCampsGetIndex = (req, res) => {
 
         const context = {
             camps: allCamps,
-            title: 'List of camps'
+            title: 'List of Camps'
         };
-        // console.log('context', context);
+        console.log('context', context);
         res.render('camps/index.ejs', {
             context,
             user: req.user
@@ -32,10 +32,10 @@ const ctrlsCampsGetNew = (req, res) => {
 };
 
 const ctrlsCampsPostNew = (req, res) => {
-    console.log('****** ctrlsCampsPostNew ******');
-    console.log(Date());
-    console.log('req.body', req.body);
-    console.log('****** ctrlsCampsPostNew ******');
+    // console.log('****** ctrlsCampsPostNew ******');
+    // console.log(Date());
+    // console.log('req.body', req.body);
+    // console.log('****** ctrlsCampsPostNew ******');
     db.mdlsCamp.create(req.body, (err, createdCamp) => {
         console.log('createdCamp', createdCamp);
         if (err) return console.log('Error in data creation:', err);
