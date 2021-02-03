@@ -7,17 +7,32 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Fun icons -->
     <!-- <script type="text/javascript" src="/js/script.js" defer></script> -->
-    <title>Document</title>
+    <title>GO Camping</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="container">
+        <div class="">
 
             <nav class="">
                 <a href="/" class="btn green left">GO Camping</a>
-                <a href="/" class="btn blue right">ALL CAMPGROUNDS</a>
-                <a href="/camps/new.ejs" class="btn right">ADD CAMPGROUND</a>
+
+                <ul class="right">
+                    <li><a href="/">Home</a></li>
+                    <!-- new html below -->
+                    <li>
+                        <% if (user) { %>
+                            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                            <% } else { %>
+                                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Togin with Google</a>
+                                <% } %>
+                    </li>
+                </ul>
+
+                <!-- <a href="/" class="btn blue right">ALL CAMPGROUNDS</a>
+                <a href="/camps/new.ejs" class="btn right">ADD CAMPGROUND</a> -->
             </nav>
         </div>

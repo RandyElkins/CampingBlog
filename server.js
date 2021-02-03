@@ -1,9 +1,9 @@
 /* EXTERNAL MODULES */
 const express = require('express');
 const morgan = require('morgan');
-const session = require('express-session')
-const passport = require('passport')
-const methodOverride = require('method-override')
+const session = require('express-session');
+const passport = require('passport');
+const methodOverride = require('method-override');
 
 /* INTERNAL MODULES */
 const routes = require('./routes/index.js');
@@ -12,7 +12,7 @@ const logger = require('./middleware/logger');
 // const studentsRoutes = require('./routes/students');
 
 /******* PORT *******/
-const PORT = 3100;
+const PORT = process.env.DATABASE_URL || 3000;
 
 /*** APP INSTANCE ***/
 const app = express();
@@ -44,6 +44,8 @@ app.use(passport.session());
 
 /****** ROUTES ******/
 app.use('/', routes.rtsCamps);
+app.use('/', routes.rtsOauth);
+// app.use('/', routes.routes);
 // app.use('/', indexRoutes);
 // app.use('/', studentsRoutes);
 

@@ -14,18 +14,20 @@ const ctrlsCampsGetIndex = (req, res) => {
             title: 'List of camps'
         };
         // console.log('context', context);
-        res.render('camps/index.ejs', context);
-
+        res.render('camps/index.ejs', {
+            context,
+            user: req.user
+        });
     });
 };
 
 const ctrlsCampsGetNew = (req, res) => {
-    res.render('camps/new.ejs'); // we’ll be changing this later
+    res.render('camps/new'); // we’ll be changing this later
 };
 
 const ctrlsCampsPostNew = (req, res) => {
     // console.log('req.body', req.body);
-    db.mdlsCamp.create(req.body, (err, createdFlight) => {
+    db.mdlsCamp.create(req.body, (err, createdCamp) => {
         if (err) return console.log('Error in data creation:', err);
         console.log('Data entered into DB.');
 
