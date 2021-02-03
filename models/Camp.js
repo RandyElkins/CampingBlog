@@ -14,11 +14,11 @@ const campSchema = new Schema({
     },
     campDbImage: {
         type: String,
-        required: false,
+        required: true,
     },
     campDbDescription: {
         type: String,
-        required: false,
+        required: true,
     },
     campDbLocation: {
         type: String,
@@ -29,19 +29,12 @@ const campSchema = new Schema({
         // default: Date.now,
         default: new Date(new Date().setFullYear(new Date().getFullYear() + 0)),
     },
-    comments: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Comment'
-    }],
+    // comments: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Comment'
+    // }],
 }, {
     // timestamps: { currentTime: () => Math.floor(Date.now() / 1000) },
-});
-
-const commentSchema = new Schema({
-    commentDbComment: {
-        type: String,
-        required: true,
-    },
 });
 
 const Camp = mongoose.model('Camp', campSchema);
