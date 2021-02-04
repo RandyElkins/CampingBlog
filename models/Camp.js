@@ -29,10 +29,14 @@ const campSchema = new Schema({
         // default: Date.now,
         default: new Date(new Date().setFullYear(new Date().getFullYear() + 0)),
     },
-    // comments: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Comment'
-    // }],
+    users: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Comment',
+    }],
 }, {
     // timestamps: { currentTime: () => Math.floor(Date.now() / 1000) },
 });

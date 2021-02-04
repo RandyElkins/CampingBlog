@@ -1,0 +1,24 @@
+<%- include('../../partials/header') %>
+    <%//console.log("*****************************************************************");%>
+        <%//console.log(title, camp, req.user);%>
+
+            <div class="">
+                <div class="">
+                    <img class="" src="<%= camp.campDbImage %>" />
+                    <div class="">
+                        <h4 class="">$
+                            <%= camp.campDbPrice %>/night</h4>
+                        <h4>
+                            <a>
+                                <%= camp.campDbName %>
+                            </a>
+                        </h4>
+                        <p>
+                            <%= camp.campDbDescription %>
+                        </p>
+                        <p>
+                            <%= camp.campDbLocation %>
+                        </p>
+
+
+                        <%- include('../../partials/footer') %>

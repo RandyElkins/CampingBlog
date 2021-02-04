@@ -2,7 +2,7 @@ const db = require('../config/database.js');
 // const User = require('../models/User.js');
 // const script = require('../public/js/script.js');
 
-// Create a function 'index' to render ALL camps at the '/camps/index.js' route (aka: '...PORT}`/camps')
+// Route to 'index' that renders ALL camps at the '/camps/index.js' route (aka: '...PORT}`/camps')
 // GET + Path http://localhost:`${PORT}`[/views]/camps[/index.js]
 const ctrlsCampsGetIndex = (req, res) => {
 
@@ -22,6 +22,7 @@ const ctrlsCampsGetIndex = (req, res) => {
     });
 };
 
+// Route to the new entry FORM
 const ctrlsCampsGetNew = (req, res) => {
     db.mdlsUser.find({}, function(err, users) {
         res.render('camps/new', {
@@ -31,9 +32,14 @@ const ctrlsCampsGetNew = (req, res) => {
     });
 };
 
+// Route to POST a new campground
 const ctrlsCampsPostNew = (req, res) => {
     // console.log('****** ctrlsCampsPostNew ******');
     // console.log(Date());
+    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+    // console.log('req.body', req.body);
+    req.body.users = req.user._id;
+    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
     // console.log('req.body', req.body);
     // console.log('****** ctrlsCampsPostNew ******');
     db.mdlsCamp.create(req.body, (err, createdCamp) => {
@@ -45,10 +51,43 @@ const ctrlsCampsPostNew = (req, res) => {
     res.redirect('/'); // 'redirect' goes thru the ROUTE, not just shows the 'ejs' file, so make sure to put the ROUTE, & NOT the 'ejs' file
 };
 
+// Show
+const ctrlsCampsDetails = (req, res) => {
+    const id = req.params.campId;
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+    console.log('req', req);
+    const user = req.user;
+
+    db.mdlsCamp.findById(id)
+        .populate('user')
+        .exec(function(err, camp, user) {
+            console.log('camp', camp);
+            console.log('id', id);
+            db.mdlsUser.find({
+                _id: {
+                    $nin: camp.user,
+                }
+            })
+            res.render('camps/show', { title: 'Camp Details', camp, user });
+        });
+    // db.mdlsCamp.findById(id, (err, foundCamp) => {
+
+    //     if (err) return console.log(err);
+
+    //     const context = {
+    //         camp: foundCamp,
+    //     }
+
+    //     res.render('camps/show', context);
+    // });
+};
+
+
 // Export the various 'camps' functions created
 // These will be picked up by '/controllers/index.js' to be connected via '/routes'
 module.exports = {
     ctrlsCampsGetIndex,
     ctrlsCampsGetNew,
     ctrlsCampsPostNew,
+    ctrlsCampsDetails,
 }

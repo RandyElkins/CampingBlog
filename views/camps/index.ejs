@@ -13,28 +13,30 @@
         <!-- </div> -->
     </header>
 
-    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
-        <% context.camps.forEach((camp, idx) => { %>
+    <% context.camps.forEach((camp, idx) => { %>
+        <div class="row text-center" style="display: flex; flex-wrap: wrap;">
             <%console.log('camp', camp);%>
                 <div class="col-md-3 col-sm-6">
                     <div class="thumbnail">
-                        <!-- <img src="https://res.cloudinary.com/djxlykr6h/image/upload/v1603687197/familyAtBaker_g123n8.jpg"> -->
                         <img src="<%= camp.campDbImage %>">
                         <div class="caption">
-                            <h4 class="pull-left">
-                                <!-- Beautiful Baker -->
+                            <h4 class="left">
                                 <%= camp.campDbName %>
                             </h4>
-                            <h4 class="pull-right">$
+                            <h4 class="right">$
                                 <%= camp.campDbPrice %>
                                     /nt</h4>
+                            <h4 class="right">$
+                                <%= camp.users %>
+                            </h4>
                         </div>
-                        <p>
-                            <a href="/camp/<%= camp._id %>" class="btn btn-primary">More Info</a>
-                        </p>
+                        <br>
+                        <div>
+                            <a href="/camps/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                        </div>
                     </div>
                 </div>
-                <% }); %>
-    </div>
+        </div>
+        <% }); %>
 
-    <%- include('../../partials/footer') %>
+            <%- include('../../partials/footer') %>
