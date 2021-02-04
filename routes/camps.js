@@ -11,7 +11,9 @@ router.get('/', ctrlsAll.ctrlsCamps.ctrlsCampsGetIndex); // Do NOT end with '/in
 router.get('/camps/new', isLoggedIn, ctrlsAll.ctrlsCamps.ctrlsCampsGetNew); // Do NOT end with '.ejs'
 router.post('/camps', isLoggedIn, ctrlsAll.ctrlsCamps.ctrlsCampsPostNew); // Do NOT end with '.ejs'
 router.get('/camps/:campId', ctrlsAll.ctrlsCamps.ctrlsCampsDetails);
-router.delete('/camps/:id', ctrlsAll.ctrlsCamps.ctrlsCampsDelete);
+router.delete('/camps/:campId', ctrlsAll.ctrlsCamps.ctrlsCampsDelete);
+router.get('/camps/:campId/edit', ctrlsAll.ctrlsCamps.ctrlsCampsGetEdit);
+router.put('/camps/:campId/edit', ctrlsAll.ctrlsCamps.ctrlsCampsPutEdit);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

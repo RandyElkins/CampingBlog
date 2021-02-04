@@ -47,29 +47,83 @@ const ctrlsCampsPostNew = (req, res) => {
 
 // Show
 const ctrlsCampsDetails = (req, res) => {
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+    console.log('req.params.campId', req.params.campId);
     const id = req.params.campId;
     const user = req.user;
     db.mdlsCamp.findById(id)
         .populate('user')
         .exec(function(err, camp, user) {
             console.log('camp', camp);
+            console.log('user', user);
             console.log('id', id);
             db.mdlsUser.find({
                 _id: {
-                    $nin: camp.user,
-                }
+                    $nin: camp.users,
+                },
             })
             res.render('camps/show', { title: 'Camp Details', camp, user });
         });
 };
 
 const ctrlsCampsDelete = (req, res) => {
-    const id = req.params.id;
+    const id = req.params.campId;
     db.mdlsCamp.findByIdAndDelete(id, (err, deletedCamp) => {
         if (err) return console.log(err);
         res.redirect('/');
     });
 };
+
+const ctrlsCampsGetEdit = (req, res) => {
+    console.log(`!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ${new Date()} !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`);
+    console.log('req.params', req.params);
+    const id = req.params.campId;
+    const user = req.user;
+    db.mdlsCamp.findById(id)
+        .populate('user')
+        .exec(function(err, camp, user) {
+            console.log('camp', camp);
+            console.log('user', user);
+            console.log('id', id);
+            db.mdlsUser.find({
+                _id: {
+                    // $nin: camp.users,
+                },
+            })
+            res.render('camps/edit', { title: 'Camp Details', camp, user });
+        });
+};
+
+const ctrlsCampsPutEdit = (req, res) => {
+    const id = req.params.campId;
+    db.mdlsCamp.findByIdAndUpdate(
+        id, {
+            $set: {
+                ...req.body
+            },
+        }, {
+            new: true
+        },
+        (err, updateCamp) => {
+            if (err) return console.log(err);
+
+            res.redirect(`/camps/${id}`)
+        });
+
+    // db.mdlsCamp.findByIdAndUpdate(id)
+    //     .populate('user')
+    //     .exec(function(err, camp, user) {
+    //         console.log('camp', camp);
+    //         console.log('user', user);
+    //         console.log('id', id);
+    //         db.mdlsUser.find({
+    //             _id: {
+    //                 $nin: camp.users,
+    //             },
+    //         })
+    //         res.render('camps/show', { title: 'Camp Details', camp, user });
+    //     });
+}
 
 // Export the various 'camps' functions created
 // These will be picked up by '/controllers/index.js' to be connected via '/routes'
@@ -79,4 +133,6 @@ module.exports = {
     ctrlsCampsPostNew,
     ctrlsCampsDetails,
     ctrlsCampsDelete,
+    ctrlsCampsGetEdit,
+    ctrlsCampsPutEdit,
 }
