@@ -5,11 +5,8 @@ const db = require('../config/database.js');
 // Route to 'index' that renders ALL camps at the '/camps/index.js' route (aka: '...PORT}`/camps')
 // GET + Path http://localhost:`${PORT}`[/views]/camps[/index.js]
 const ctrlsCampsGetIndex = (req, res) => {
-
     db.mdlsCamp.find({}).sort({ campDbDate: 'asc' }).exec((err, allCamps) => {
-
         if (err) return console.log(err);
-
         const context = {
             camps: allCamps,
             title: 'List of Camps'
@@ -39,9 +36,6 @@ const ctrlsCampsPostNew = (req, res) => {
     // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
     // console.log('req.body', req.body);
     req.body.users = req.user._id;
-    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    // console.log('req.body', req.body);
-    // console.log('****** ctrlsCampsPostNew ******');
     db.mdlsCamp.create(req.body, (err, createdCamp) => {
         console.log('createdCamp', createdCamp);
         if (err) return console.log('Error in data creation:', err);
@@ -54,10 +48,7 @@ const ctrlsCampsPostNew = (req, res) => {
 // Show
 const ctrlsCampsDetails = (req, res) => {
     const id = req.params.campId;
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    console.log('req', req);
     const user = req.user;
-
     db.mdlsCamp.findById(id)
         .populate('user')
         .exec(function(err, camp, user) {
@@ -70,18 +61,15 @@ const ctrlsCampsDetails = (req, res) => {
             })
             res.render('camps/show', { title: 'Camp Details', camp, user });
         });
-    // db.mdlsCamp.findById(id, (err, foundCamp) => {
-
-    //     if (err) return console.log(err);
-
-    //     const context = {
-    //         camp: foundCamp,
-    //     }
-
-    //     res.render('camps/show', context);
-    // });
 };
 
+const ctrlsCampsDelete = (req, res) => {
+    const id = req.params.id;
+    db.mdlsCamp.findByIdAndDelete(id, (err, deletedCamp) => {
+        if (err) return console.log(err);
+        res.redirect('/');
+    });
+};
 
 // Export the various 'camps' functions created
 // These will be picked up by '/controllers/index.js' to be connected via '/routes'
@@ -90,4 +78,5 @@ module.exports = {
     ctrlsCampsGetNew,
     ctrlsCampsPostNew,
     ctrlsCampsDetails,
+    ctrlsCampsDelete,
 }

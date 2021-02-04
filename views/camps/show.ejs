@@ -19,6 +19,10 @@
                         <p>
                             <%= camp.campDbLocation %>
                         </p>
+                        <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn red white-text">Delete</button>
+                        </form>
+
 
 
                         <%- include('../../partials/footer') %>
