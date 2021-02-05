@@ -25,14 +25,17 @@
                                 <%= camp.users.name %>
                             </h4>
                             <%console.log('camp', camp)%>
-                                <%console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')%>
-                                    <%console.log('user', user)%>
-                                        <form action="/camps/<%= camp._id %>/edit" method="GET">
-                                            <button type="submit" class="btn orange white-text">Edit</button>
-                                        </form>
-                                        <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
-                                            <button type="submit" class="btn red white-text">Delete</button>
-                                        </form>
+                                <% if (camp.users._id.equals(user && user._id)) { %>
+                                    <!-- <%//if (!!user && user._id == camp.users._id) {%> -->
+                                    <!--Why doesn't this work vs. the camp.users._id.equals... code above?-->
+                                    <form action="/camps/<%= camp._id %>/edit" method="GET">
+                                        <button type="submit" class="btn orange white-text">Edit</button>
+                                    </form>
+                                    <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="btn red white-text">Delete</button>
+                                    </form>
+                                    <%} else {%>
+                                        <%}%>
                         </div>
 
 
