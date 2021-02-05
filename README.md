@@ -6,12 +6,13 @@ My family and I used to go camping fairly often, and this blog would be a great 
 ## The GO Camping Blog App
 
 ### Screenshot(s)
-<!!!!!!>Insert screenshots here!!!<!!!!!!>\
-<!!!!!!>Insert screenshots here!!!<!!!!!!>\
-<!!!!!!>Insert screenshots here!!!<!!!!!!>\
-<!!!!!!>Insert screenshots here!!!<!!!!!!>\
-<!!!!!!>Insert screenshots here!!!<!!!!!!>\
-<!!!!!!>Insert screenshots here!!!<!!!!!!>
+#### Homepage
+![homepage](./public/images/home.png)
+#### Details Page for a Non-Logged In User
+![Details Page for a Non-Logged In User](./public/images/details_nonUser.png)
+#### Details Page for a Logged In User
+![Details Page for a Logged In User](./public/images/details_user.png)
+
 
 ### Technologies Used
 - HTML (via EJS)

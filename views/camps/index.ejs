@@ -20,16 +20,16 @@
                     <div class="thumbnail">
                         <img src="<%= camp.campDbImage %>">
                         <div class="caption">
-                            <h4 class="left">
+                            <h3 class="left top">
                                 <%= camp.campDbName %>
-                            </h4>
-                            <h4 class="right">$
+                            </h3>
+                            <h4 class="right bottom">$
                                 <%= camp.campDbPrice %>
                                     /nt</h4>
+                            <a href="/camps/<%= camp._id %>" class="right btn btn-primary">More Info</a>
                         </div>
                         <br>
                         <div>
-                            <a href="/camps/<%= camp._id %>" class="btn btn-primary">More Info</a>
                         </div>
                     </div>
                 </div>
