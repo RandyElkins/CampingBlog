@@ -2,4 +2,5 @@
 // Export to be available for pickup by '/routes/ | camps.js | tickets.js | etc.
 module.exports = {
     ctrlsCamps: require('./camps.js'), // 
+    ctrlsComments: require('./comments.js'), // 
 };

@@ -4,29 +4,44 @@
 
             <div class="">
                 <div class="">
-                    <img class="" src="<%= camp.campDbImage %>" />
-                    <div class="">
-                        <h4 class="">$
-                            <%= camp.campDbPrice %>/night</h4>
-                        <h4>
-                            <%= camp.campDbName %>
-                        </h4>
-                        <p>
-                            <%= camp.campDbDescription %>
-                        </p>
-                        <p>
-                            <%= camp.campDbLocation %>
-                        </p>
-                        <h4 class="right">$
-                            <%= camp.users %>
-                        </h4>
-                        <form action="/camps/<%= camp._id %>/edit" method="GET">
-                            <button type="submit" class="btn orange white-text">Edit</button>
-                        </form>
-                        <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn red white-text">Delete</button>
-                        </form>
-
+                    <div class="card">
+                        <img class="" src="<%= camp.campDbImage %>" />
+                        <div class="info">
+                            <div class="caption">
+                                <h4 class="left">
+                                    <%= camp.campDbName %>
+                                </h4>
+                                <h4 class="right">$
+                                    <%= camp.campDbPrice %>
+                                        /nt</h4>
+                            </div>
+                            <p>
+                                <%= camp.campDbDescription %>
+                            </p>
+                            <p>
+                                <%= camp.campDbLocation %>
+                            </p>
+                            <h4 class="right">Submitted by
+                                <%= camp.users.name %>
+                            </h4>
+                            <%console.log('camp', camp)%>
+                                <% if (camp.users._id.equals(user && user._id)) { %>
+                                    <!-- <%//if (!!user && user._id == camp.users._id) {%> -->
+                                    <!--Why doesn't this work vs. the camp.users._id.equals... code above?-->
+                                    <form action="/camps/<%= camp._id %>/edit" method="GET">
+                                        <button type="submit" class="btn orange white-text">Edit</button>
+                                    </form>
+                                    <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="btn red white-text">Delete</button>
+                                    </form>
+                                    <%} else {%>
+                                        <%}%>
+                        </div>
+                        <div>
+                            <form action="/camps/<%= camp._id %>/comments/new" method="GET">
+                                <button type="submit" class="btn green white-text">Add New Comment</button>
+                            </form>
+                        </div>
 
 
                         <%- include('../../partials/footer') %>

@@ -1,0 +1,74 @@
+/* 
+#5E3319 brown
+#5AAD35 light-green
+#475657 gray
+#45B1C7 aqua
+#187F15 green
+*/
+
+body {
+    background-color: #5E3319;
+}
+
+.jumbotron {
+    background-color: #5AAD35;
+    padding: 2%;
+}
+
+.card {
+    background-color: #475657;
+}
+
+nav {
+    background-color: #187F15;
+}
+
+
+/* h1 {
+    color: black;
+} */
+
+h1,
+h4,
+a,
+p {
+    color: white;
+}
+
+.form {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #475657;
+    border-radius: 10px;
+}
+
+.info,
+.caption {
+    background-color: #475657;
+    color: black;
+}
+
+.form-group {
+    width: 95%;
+    margin: 30px auto;
+    border-radius: 20px;
+}
+
+.titlePrice {
+    display: flexbox;
+    flex-direction: row;
+}
+
+label {
+    font-weight: 600;
+    color: white;
+}
+
+input {
+    border: 1px solid #475657;
+    color: white;
+}
+
+footer {
+    width: 80%;
+}

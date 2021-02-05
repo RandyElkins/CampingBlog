@@ -1,0 +1,24 @@
+<%- include('../../partials/header') %>
+
+    <div class="row">
+        <h1 style="text-align: center;">Add a New Comment to
+            <%console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')%>
+                <%console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')%>
+                    <%'console.log(camp)', console.log(camp)%>
+                        <%= camp.campDbName%>
+        </h1>
+        <div class="form">
+            <form action="/comments" method="POST">
+                <div class="form-group">
+                    <label for="name">Comment Text</label>
+                    <input class="form-control" type="text" name="campDbName" placeholder="text" autofocus required/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/">Back to Campgrounds</a>
+        </div>
+    </div>
+
+    <%- include('../../partials/footer') %>

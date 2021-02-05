@@ -44,6 +44,7 @@ app.use(passport.session());
 
 /****** ROUTES ******/
 app.use('/', routes.rtsCamps);
+app.use('/', routes.rtsComments);
 app.use('/', routes.rtsOauth);
 // app.use('/', routes.routes);
 // app.use('/', indexRoutes);
