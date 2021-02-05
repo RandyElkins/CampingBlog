@@ -2,4 +2,6 @@
 // Export to be available for pickup by '/views/ | camps.js | comments.js | etc.
 module.exports = {
     mdlsCamp: require('./Camp.js'),
+    mdlsComment: require('./Comment.js'),
+    mdlsUser: require('./User.js'),
 };

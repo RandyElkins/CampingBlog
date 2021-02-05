@@ -1,5 +1,39 @@
 <%- include('../../partials/header') %>
 
-    <h1>Welcome to the Get-Outside (GO) Camping Blog!</h1>
+    <header class="jumbotron">
+        <!-- <div class="container"> -->
+        <h1>Welcome to the Get-Outside (GO) Camping Blog!</h1>
+        <p>View our hand-picked campgrounds from all over the world</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="/camps/new">Add New Campground</a>
+            <% if (!user) { %>
+                <a href="/auth/google">Login with Google to Add New Campgrounds</a>
+                <% } %>
+        </p>
+        <!-- </div> -->
+    </header>
 
-    <%- include('../../partials/footer') %>
+    <% context.camps.forEach((camp, idx) => { %>
+        <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+            <%console.log('camp', camp);%>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%= camp.campDbImage %>">
+                        <div class="caption">
+                            <h4 class="left">
+                                <%= camp.campDbName %>
+                            </h4>
+                            <h4 class="right">$
+                                <%= camp.campDbPrice %>
+                                    /nt</h4>
+                        </div>
+                        <br>
+                        <div>
+                            <a href="/camps/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <% }); %>
+
+            <%- include('../../partials/footer') %>

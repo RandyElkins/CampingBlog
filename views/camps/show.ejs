@@ -1,0 +1,32 @@
+<%- include('../../partials/header') %>
+    <%//console.log("*****************************************************************");%>
+        <%//console.log(title, camp, req.user);%>
+
+            <div class="">
+                <div class="">
+                    <img class="" src="<%= camp.campDbImage %>" />
+                    <div class="">
+                        <h4 class="">$
+                            <%= camp.campDbPrice %>/night</h4>
+                        <h4>
+                            <%= camp.campDbName %>
+                        </h4>
+                        <p>
+                            <%= camp.campDbDescription %>
+                        </p>
+                        <p>
+                            <%= camp.campDbLocation %>
+                        </p>
+                        <h4 class="right">$
+                            <%= camp.users %>
+                        </h4>
+                        <form action="/camps/<%= camp._id %>/edit" method="GET">
+                            <button type="submit" class="btn orange white-text">Edit</button>
+                        </form>
+                        <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn red white-text">Delete</button>
+                        </form>
+
+
+
+                        <%- include('../../partials/footer') %>

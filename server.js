@@ -51,5 +51,5 @@ app.use('/', routes.rtsOauth);
 
 /** APP  LISTENING **/
 app.listen(PORT, () => {
-    console.log(`Express is listening on port:${PORT}`);
+    console.log(`App is listening at port ${PORT}\nhttp://localhost:${PORT}`);
 });

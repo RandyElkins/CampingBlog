@@ -3,7 +3,7 @@ const passport = require('passport');
 
 router.get('/', function(req, res) {
     res.render('index', {
-        user: req.user
+        user: req.user,
     });
 });
 
@@ -13,7 +13,7 @@ router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 
 // Google OAuth callback route
 router.get('/oauth2callback', passport.authenticate(
     'google', {
-        successRedirect: '/camps/new',
+        successRedirect: '/',
         failureRedirect: '/'
     }
 ));
