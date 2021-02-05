@@ -12,6 +12,7 @@ body {
 
 .jumbotron {
     background-color: #5AAD35;
+    padding: 2%;
 }
 
 .card {
@@ -22,8 +23,16 @@ nav {
     background-color: #187F15;
 }
 
-h1 {
+
+/* h1 {
     color: black;
+} */
+
+h1,
+h4,
+a,
+p {
+    color: white;
 }
 
 .form {

@@ -37,7 +37,11 @@
                                     <%} else {%>
                                         <%}%>
                         </div>
-
+                        <div>
+                            <form action="/camps/<%= camp._id %>/comments/new" method="GET">
+                                <button type="submit" class="btn green white-text">Add New Comment</button>
+                            </form>
+                        </div>
 
 
                         <%- include('../../partials/footer') %>

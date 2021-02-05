@@ -11,7 +11,6 @@ const ctrlsCampsGetIndex = (req, res) => {
             camps: allCamps,
             title: 'List of Camps'
         };
-        console.log('context', context);
         res.render('camps/index.ejs', {
             context,
             user: req.user
@@ -21,11 +20,7 @@ const ctrlsCampsGetIndex = (req, res) => {
 
 // Route to the new entry FORM
 const ctrlsCampsGetNew = (req, res) => {
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.user !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    console.log('req.user', req.user);
     db.mdlsUser.find({}, function(err, users) {
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! users !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        console.log('users', users);
         res.render('camps/new', {
             users,
             user: req.user,
@@ -35,39 +30,27 @@ const ctrlsCampsGetNew = (req, res) => {
 
 // Route to POST a new campground
 const ctrlsCampsPostNew = (req, res) => {
-    // console.log('****** ctrlsCampsPostNew ******');
-    // console.log(Date());
-    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req.body !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    // console.log('req.body', req.body);
     req.body.users = req.user._id;
     db.mdlsCamp.create(req.body, (err, createdCamp) => {
         console.log('createdCamp', createdCamp);
         if (err) return console.log('Error in data creation:', err);
         console.log('Data entered into DB.');
-
     });
     res.redirect('/'); // 'redirect' goes thru the ROUTE, not just shows the 'ejs' file, so make sure to put the ROUTE, & NOT the 'ejs' file
 };
 
 // Show
 const ctrlsCampsDetails = (req, res) => {
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! req !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    console.log('req.params.campId', req.params.campId);
     const id = req.params.campId;
     const user = req.user;
     db.mdlsCamp.findById(id)
         .populate('users')
         .exec(function(err, camp) {
-            console.log('camp.users', camp.users);
-            console.log('user', user);
-            console.log('id', id);
             db.mdlsUser.find({
                 _id: {
                     $nin: camp.users,
                 },
             });
-            console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! camp !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-            console.log('camp', camp);
             res.render('camps/show', { title: 'Camp Details', camp, user: req.user });
         });
 };
@@ -81,16 +64,11 @@ const ctrlsCampsDelete = (req, res) => {
 };
 
 const ctrlsCampsGetEdit = (req, res) => {
-    console.log(`!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ${new Date()} !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`);
-    console.log('req.params', req.params);
     const id = req.params.campId;
     const user = req.user;
     db.mdlsCamp.findById(id)
         .populate('user')
         .exec(function(err, camp) {
-            console.log('camp', camp);
-            console.log('user', user);
-            console.log('id', id);
             db.mdlsUser.find({
                 _id: {
                     // $nin: camp.users,
