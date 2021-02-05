@@ -23,13 +23,10 @@ nav {
     background-color: #187F15;
 }
 
-
-/* h1 {
-    color: black;
-} */
-
+body,
 h1,
 h4,
+h3,
 a,
 p {
     color: white;
@@ -44,8 +41,8 @@ p {
 
 .info,
 .caption {
+    display: grid;
     background-color: #475657;
-    color: black;
 }
 
 .form-group {
@@ -61,12 +58,10 @@ p {
 
 label {
     font-weight: 600;
-    color: white;
 }
 
 input {
     border: 1px solid #475657;
-    color: white;
 }
 
 footer {

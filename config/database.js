@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const connectionStr = process.env.DATABASE_URL; // ‘camps’ is the name of the DB that will be either:
 const connectionStr = 'mongodb://127.0.0.1:27017/goCampBlog'; // ‘camps’ is the name of the DB that will be either:
 // - created, if it doesn’t already exist, or
 // - connected to, if it exists
