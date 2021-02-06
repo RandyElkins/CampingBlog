@@ -20,10 +20,11 @@ My family and I used to go camping fairly often, and this blog would be a great 
 - JavaScript
 
 ### Getting Started
-Please click <!!!!!!>[HERE](https://www.google.com/)<!!!!!!> to open the app.
+Please click <!!!!!!>[HERE](https://secret-headland-61462.herokuapp.com/)<!!!!!!> to open the app.
 
 ### Next Steps
 Below are list of features I'd like to add in the future:
+- Complete the comment CRUD
 - Google Maps showing the location of the campgrounds in the DB
 - Allow people to comment to other people's comments
 - Have the campgrounds listed in a sortable and filterable table
