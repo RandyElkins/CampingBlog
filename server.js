@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(session({
-    store: new MongoStore({ url: process.env.DATABASE_URL }),
+    store: new MongoStore({ url: process.env.MONGODB_URI }),
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
