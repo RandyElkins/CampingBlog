@@ -2,6 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const methodOverride = require('method-override');
 
@@ -12,7 +13,7 @@ const logger = require('./middleware/logger');
 // const studentsRoutes = require('./routes/students');
 
 /******* PORT *******/
-const PORT = process.env.DATABASE_URL || 3000;
+const PORT = process.env.PORT || 3000;
 
 /*** APP INSTANCE ***/
 const app = express();
@@ -35,9 +36,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 app.use(session({
-    secret: 'LifeHappensOutside!',
+    store: new MongoStore({ url: process.env.MONGODB_URI }),
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60 * 24 * 7 * 2 // 2 weeks
+    }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
